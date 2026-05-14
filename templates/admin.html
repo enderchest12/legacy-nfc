@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>LEGACY ADMIN</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    background:#000;
+    color:white;
+    font-family:Arial, sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.form-box{
+    width:100%;
+    max-width:480px;
+    background:linear-gradient(180deg,#111,#050505);
+    border:1px solid rgba(255,204,0,.4);
+    border-radius:28px;
+    padding:28px;
+    box-shadow:0 0 45px rgba(255,204,0,.25);
+}
+
+.logo{
+    width:100px;
+    height:100px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:#f1c40f;
+    color:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:68px;
+    font-weight:900;
+    box-shadow:0 0 35px #f1c40f;
+}
+
+.brand{
+    text-align:center;
+    color:#f1c40f;
+    font-size:32px;
+    font-weight:900;
+    letter-spacing:6px;
+    margin-bottom:25px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin:9px 0;
+    border-radius:14px;
+    border:1px solid rgba(255,204,0,.3);
+    background:#0d0d0d;
+    color:white;
+    font-size:15px;
+    outline:none;
+}
+
+input:focus{
+    border-color:#f1c40f;
+    box-shadow:0 0 15px rgba(255,204,0,.3);
+}
+
+button{
+    width:100%;
+    padding:16px;
+    margin-top:15px;
+    border:none;
+    border-radius:16px;
+    background:#f1c40f;
+    color:#000;
+    font-weight:900;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.footer{
+    margin-top:20px;
+    text-align:center;
+    color:#777;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+@media (min-width:768px){
+    .form-box{
+        max-width:650px;
+        padding:40px;
+    }
+
+    form{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    input{
+        margin:0;
+    }
+
+    button{
+        grid-column:1/3;
+    }
+}
+
+@media (max-width:400px){
+    .form-box{
+        padding:22px;
+        border-radius:22px;
+    }
+
+    .brand{
+        font-size:27px;
+        letter-spacing:4px;
+    }
+
+    .logo{
+        width:90px;
+        height:90px;
+        font-size:60px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+    <div class="logo">S</div>
+    <div class="brand">LEGACY</div>
+
+    <form action="/admin" method="POST">
+
+        <input type="text" name="slug" placeholder="URL única (ej: carl-dev)" required>
+        <input type="text" name="nombre" placeholder="Nombre del Cliente" required>
+
+        <input type="text" name="cargo" placeholder="Cargo o Profesión">
+        <input type="text" name="whatsapp" placeholder="WhatsApp">
+
+        <input type="text" name="instagram" placeholder="Instagram">
+        <input type="text" name="facebook" placeholder="Facebook">
+
+        <input type="text" name="banco" placeholder="Banco">
+        <input type="text" name="tipo_cuenta" placeholder="Tipo de Cuenta">
+
+        <input type="text" name="numero_cuenta" placeholder="Número Cuenta">
+        <input type="text" name="rut_pago" placeholder="RUT">
+
+        <input type="text" name="link_mercadopago" placeholder="Link MercadoPago">
+
+        <button type="submit">CREAR PERFIL NFC</button>
+
+    </form>
+
+    <div class="footer">LEGACY ADMIN PANEL</div>
+
+</div>
+
+</body>
+</html>
