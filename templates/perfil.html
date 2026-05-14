@@ -156,10 +156,15 @@ h1{
 
     <div class="title">REDES SOCIALES</div>
 
-    <a href="https://wa.me/{{ user.whatsapp }}" class="btn btn-dark">WhatsApp</a>
-    <a href="https://instagram.com/{{ user.instagram }}" class="btn btn-dark">Instagram</a>
-    <a href="https://facebook.com/{{ user.facebook }}" class="btn btn-dark">Facebook</a>
-
+   <a href="https://wa.me/{{ user.whatsapp }}">
+WhatsApp
+</a>
+    <a href="{{ user.instagram }}">
+Instagram
+</a>
+   <a href="{{ user.facebook }}" class="btn btn-dark">
+Facebook
+</a>
     <div class="title">PAGOS Y TRANSFERENCIA</div>
 
     <div class="bank">
